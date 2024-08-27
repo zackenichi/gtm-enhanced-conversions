@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Thank You for Contacting Us!</h1>
+    </header>
+
+    <section class="thank-you">
+        <h2>We will get back to you shortly.</h2>
+        <p>Your email: <span id="userEmail"></span></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Company</p>
+    </footer>
+
+    <script>
+        // Extract the email from the query parameters
+        const params = new URLSearchParams(window.location.search);
+        const email = params.get('email');
+
+        // Display the email on the thank you page
+        if (email) {
+            document.getElementById('userEmail').textContent = email;
+        }
+    </script>
+</body>
+
+</html>
